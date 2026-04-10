@@ -1,0 +1,5 @@
+.chat-app { display: flex; width: 100vw; height: 100vh; overflow: hidden; background: var(--obsidian); }
+.empty-state { flex: 1; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 16px; color: var(--gray); }
+.empty-icon { font-size: 48px; width: 80px; height: 80px; background: var(--violet-dim); border-radius: 20px; display: flex; align-items: center; justify-content: center; margin-bottom: 8px; }
+.empty-state h2 { font-family: var(--font-display); color: var(--cream); font-size: 24px; font-weight: 600; }
+.empty-state p { font-size: 15px; margin-bottom: 8px; }

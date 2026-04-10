@@ -1,0 +1,112 @@
+/* ─── 4-COLOR PALETTE ────────────────────────────────────────────────────────
+   • Obsidian  #1A1A2E  — primary dark background
+   • Violet    #7C3AED  — accent / brand / sent messages
+   • Sage      #10B981  — online status / success / seen ticks
+   • Cream     #F5F0E8  — light surfaces / received messages
+   ─────────────────────────────────────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700&family=DM+Sans:wght@300;400;500&display=swap');
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+:root {
+  --obsidian:   #1A1A2E;
+  --obsidian-2: #16213E;
+  --obsidian-3: #0F3460;
+  --violet:     #7C3AED;
+  --violet-light: #A78BFA;
+  --violet-dim: #2D1B69;
+  --sage:       #10B981;
+  --sage-dim:   #065F46;
+  --cream:      #F5F0E8;
+  --cream-dim:  #E8E0D0;
+  --white:      #FFFFFF;
+  --gray:       #9CA3AF;
+  --gray-dim:   #4B5563;
+  --danger:     #EF4444;
+
+  --font-display: 'Syne', sans-serif;
+  --font-body: 'DM Sans', sans-serif;
+  --radius: 16px;
+  --radius-sm: 8px;
+  --shadow: 0 8px 32px rgba(0,0,0,0.4);
+  --shadow-sm: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+body {
+  font-family: var(--font-body);
+  background: var(--obsidian);
+  color: var(--cream);
+  height: 100vh;
+  overflow: hidden;
+}
+
+#root { height: 100vh; display: flex; }
+
+/* ─── SCROLLBARS ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: var(--violet-dim); border-radius: 4px; }
+
+/* ─── BUTTONS ────────────────────────────────────────────────────────────── */
+.btn-primary {
+  background: var(--violet);
+  color: var(--white);
+  border: none;
+  padding: 12px 28px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-display);
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s;
+  letter-spacing: 0.02em;
+}
+.btn-primary:hover { background: #6D28D9; transform: translateY(-1px); box-shadow: 0 4px 20px rgba(124,58,237,0.4); }
+.btn-primary:active { transform: translateY(0); }
+.btn-ghost {
+  background: transparent;
+  border: 1px solid var(--gray-dim);
+  color: var(--gray);
+  padding: 8px 16px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.btn-ghost:hover { border-color: var(--violet-light); color: var(--violet-light); }
+
+/* ─── INPUTS ─────────────────────────────────────────────────────────────── */
+input {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: var(--cream);
+  padding: 12px 16px;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-body);
+  font-size: 15px;
+  outline: none;
+  transition: all 0.2s;
+  width: 100%;
+}
+input:focus { border-color: var(--violet); background: rgba(124,58,237,0.08); }
+input::placeholder { color: var(--gray-dim); }
+
+/* ─── ANIMATIONS ─────────────────────────────────────────────────────────── */
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(16px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.4; }
+}
+@keyframes bounce {
+  0%, 80%, 100% { transform: translateY(0); }
+  40%           { transform: translateY(-6px); }
+}
