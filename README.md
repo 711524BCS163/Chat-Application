@@ -35,32 +35,6 @@ chat-app/
             └── NewChatModal.js / NewChatModal.css
 ```
 
----
-
-## ⚙️ Setup (2 terminals)
-
-### Terminal 1 — Backend
-
-```bash
-cd chat-app/backend
-pip install -r requirements.txt
-python app.py
-```
-
-Backend runs at: http://localhost:5000
-
-### Terminal 2 — Frontend
-
-```bash
-cd chat-app/frontend
-npm install
-npm start
-```
-
-Frontend runs at: http://localhost:3000
-
----
-
 ## ✅ Features
 
 - 🔐 JWT authentication (register / login)
@@ -74,18 +48,5 @@ Frontend runs at: http://localhost:3000
 - 🗄️ Full MySQL integration (ChatAppDB)
 
 ---
-
-## 🔒 Security Note
-
-Move DB credentials to a `.env` file before deploying:
-
-```env
-DB_HOST=localhost
-DB_PORT=3306
-DB_USER=root
-DB_PASS=your_password
-DB_NAME=ChatAppDB
-SECRET_KEY=your_jwt_secret
-```
-
-Then in `app.py` use `os.getenv('DB_PASS')` etc.
+##Authors
+Someshwar,Sabarish p
