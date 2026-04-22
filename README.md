@@ -48,7 +48,3 @@ chat-app/
 - 🗄️ Full MySQL integration (ChatAppDB)
 
 ---
----
-##Author
-Someshwar,Sabarish P
----
